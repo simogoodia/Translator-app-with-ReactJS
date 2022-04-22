@@ -1,0 +1,122 @@
+.translator-app {
+    background-color: #fff;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: .5rem;
+}
+.textarea {
+    display: flex;
+    width: 500px;
+}
+
+.textarea textarea {
+    flex: 1;
+    height: 170px;
+    border-radius: .15rem;
+    outline: none;
+    border: 1px solid #999;
+    padding: 10px;
+    resize: none;
+}
+
+.textarea textarea::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+.textarea textarea::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: #9f9f9f;
+}
+
+.textarea textarea:first-of-type {
+    border-right: none;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #999;
+    border-top: none;
+    padding: 10px 10px;
+}
+
+.controls .from,
+.controls .to {
+    display: flex;
+}
+
+.controls i {
+    color: #9f9f9f;
+    transition: all .4s ease;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.controls .from i:last-child {
+    border-right: 1px solid #999;
+    padding: 0 15px;
+}
+
+.controls .to i:first-child {
+    border-left: 1px solid #999;
+    padding: 0 0 0 15px;
+}
+
+.controls i:hover {
+    color: #000;
+}
+
+.controls .exchange i {
+    margin-left: 20px;
+}
+
+.controls .from select {
+    border: 0;
+    margin-left: -10px;
+    font-family: 'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.controls .to select {
+    border: 0;
+    margin-right: 10px;
+    font-family: 'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.controls select {
+    border: 1px solid #999;
+    padding: 4px 10px;
+}
+
+.controls select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.controls select::-webkit-scrollbar-thumb {
+    background-color: #9f9f9f;
+    border-radius: 20px;
+}
+
+.controls select:focus {
+    outline: none;
+}
+.btn button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: .15rem;
+    border: 1px solid #999;
+    color: #fff;
+    background-color: #4298b5;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Poppins', Courier, monospace, sans serif;
+}
+
+.btn button:focus {
+    outline: none;
+}
+
+.btn button:active {
+    transform: scale(0.99);
+}
