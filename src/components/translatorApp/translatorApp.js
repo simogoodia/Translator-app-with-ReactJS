@@ -5,6 +5,7 @@ import { countries } from "../../countries/countries.js";
 class TranslatorApp extends React.Component {
     constructor(props) {
         super(props);
+        this.reference = React.createRef();
         this.state = {
             fromVal: "",
             countries,
@@ -12,6 +13,7 @@ class TranslatorApp extends React.Component {
         }
     }
     componentDidMount() {
+        this.reference.current.focus();
         const twoSelect = document.querySelectorAll("select");
         twoSelect.forEach((select, idx) => {
             for(this.state.country in this.state.countries) {
@@ -85,7 +87,7 @@ class TranslatorApp extends React.Component {
             <div className="translator-app">
                 <div className="controls-gnr">
                     <div className="textarea">
-                        <textarea id="from-text" className="from" placeholder="Write text" value={this.state.fromVal} onChange={this.valChange}></textarea>
+                        <textarea id="from-text" className="from" placeholder="Write text" value={this.state.fromVal} onChange={this.valChange} ref={this.reference}></textarea>
                         <textarea id="to-text" className="to" placeholder="Translation" readOnly disabled></textarea>
                     </div>
                     <div className="controls">
